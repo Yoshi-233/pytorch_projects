@@ -26,6 +26,6 @@ if __name__ == '__main__':
         attn_mask = attention_mask(src_lens, tgt_lens, max_len, 2)
         print(attn_mask)
 
-        # output, attn_weights = model(query, key, value, attn_mask=attn_mask)
-        # print(output.shape)
-        # print(attn_weights.shape)
+        output, attn_weights = model(query, key, value, attn_mask=attn_mask, average_attn_weights=False)
+        print(output.shape)
+        print(attn_weights.shape)
